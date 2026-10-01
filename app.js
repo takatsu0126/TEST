@@ -98,7 +98,7 @@ function render() {
   const score = countStones();
   blackScoreElement.textContent = score[BLACK];
   whiteScoreElement.textContent = score[WHITE];
-  turnLabelElement.textContent = gameOver ? "ゲーム終了" : `${currentPlayer === BLACK ? "黒" : "白"}の手番`;
+  turnLabelElement.textContent = gameOver ? "ゲーム終了" : `${currentPlayer === BLACK ? "赤" : "青"}の手番`;
   moveCountElement.textContent = `MOVE ${String(moveCount).padStart(2, "0")}`;
   passButton.disabled = gameOver || validMoves.size > 0;
   undoButton.disabled = history.length === 0;
@@ -140,7 +140,7 @@ function switchTurn() {
   }
 
   if (getValidMoves(currentPlayer).size > 0) {
-    statusMessageElement.textContent = `${nextPlayer === BLACK ? "黒" : "白"}はパス。続けてください`;
+    statusMessageElement.textContent = `${nextPlayer === BLACK ? "赤" : "青"}はパス。続けてください`;
     render();
     return;
   }
@@ -173,7 +173,7 @@ function finishGame() {
   const score = countStones();
   const result = score[BLACK] === score[WHITE]
     ? "引き分けです"
-    : `${score[BLACK] > score[WHITE] ? "黒" : "白"}の勝ちです`;
+    : `${score[BLACK] > score[WHITE] ? "赤" : "青"}の勝ちです`;
   statusMessageElement.textContent = `${result} もう一度遊びますか？`;
   render();
 }

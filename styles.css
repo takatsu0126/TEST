@@ -60,8 +60,8 @@ h1 span { color: var(--coral); font-weight: 400; margin: 0 8px; }
 .cell.valid::after { opacity: 1; transform: translate(-50%, -50%) scale(1); }
 .cell.last-move { box-shadow: inset 0 0 0 3px rgba(232, 189, 85, 0.72); }
 .stone { display: block; width: 76%; aspect-ratio: 1; border-radius: 50%; z-index: 1; box-shadow: inset -6px -7px 0 rgba(0, 0, 0, 0.16), 2px 3px 4px rgba(0, 0, 0, 0.18); animation: appear 220ms ease-out both; }
-.stone-black { background: #17231f; }
-.stone-white { background: #f4f0e6; box-shadow: inset -6px -7px 0 rgba(23, 35, 31, 0.11), 2px 3px 4px rgba(0, 0, 0, 0.18); }
+.stone-black { background: #d84d4d; }
+.stone-white { background: #3d78c5; box-shadow: inset -6px -7px 0 rgba(17, 45, 91, 0.2), 2px 3px 4px rgba(0, 0, 0, 0.18); }
 .board-note { display: flex; align-items: center; gap: 8px; min-height: 32px; margin-top: 13px; color: var(--muted); font-size: 0.83rem; }
 .live-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--coral); }
 
